@@ -1,0 +1,9 @@
+---
+applications:
+- name: visrecbot
+  path: .
+  command: npm start
+  memory: 512M
+  env:
+    NODE_ENV: production
+  host: visrecbot

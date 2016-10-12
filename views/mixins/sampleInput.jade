@@ -1,0 +1,16 @@
+include ./sampleImages.jade
+
+mixin sampleInput(className, bundle, classifierId)
+  - var sampleImages = []
+  each val in [1, 2, 3, 4, 5, 6, 7]
+    - sampleImages.push('images/samples/' + val + '.jpg')
+  - var bundleImages = []
+  each val in [0, 1, 2, 3, 4, 5]
+    - bundleImages.push('images/bundles/' + bundle + '/test/' + val + '.jpg')
+
+  form(id='#{className}--fileupload', class='#{className}--form #{className}--dropzone hideload', data-upload-template-id='template-upload-#{className}')
+    div(class='#{className}--url')
+      div(class='#{className}--invalid-url display-none') Invalid URL
+      div(class='#{className}--invalid-image-url display-none') The URL must end with .JPG, .GIF, or .PNG.
+      input(class='#{className}--url-input base--input', type='text', placeholder='Paste an image URL that ends in PNG/JPG', name='url')
+      input(class='#{className}--image-data-input base--input', type='hidden', name='image_data')

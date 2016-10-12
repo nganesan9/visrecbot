@@ -1,0 +1,58 @@
+<!-- Code for gear icon -->
+<div class="_demo--container">
+  <nav role="menubar" class="heading-nav">
+    <li role="presentation" class="base--li heading-nav--li">
+      <a href="javascript:openalertbox()"><img id="add_ip_address" style="width:45% !important" src="/images/settings.svg" alt="Gear Icon">
+      <script type="text/javascript">
+      function openalertbox() {
+        $("#dialog").dialog({
+          autoOpen: false,
+          show: {
+            effect: "blind",
+            duration: 1000
+          },
+          hide: {
+            effect: "explode",
+            duration: 1000
+          },
+          position: { my: "right top", at: "right top", of: window }
+        });
+        document.getElementById("dialog").style.display = "inline";
+        $("#dialog").dialog( "open" );
+      }
+      </script>
+      </a>
+    </li>
+  </nav>
+</div>
+
+<div id="dialog" style="display:none">
+  Enter IP Address : <input type="text" name="ipaddress" value=""><br>
+  <input type="submit" value="Submit">
+</div>
+
+<div class="_demo--banner banner">
+  <div class="_demo--container">
+    <div class="banner--service-container">
+      <div class="banner--service-icon-container"><img src="/images/service-icon.svg" alt="Visual Recognition API Icon" class="banner--service-icon"/></div>
+      <div class="banner--service-info">
+        <h1 class="banner--service-title base--h1"><img src="/images/service-icon.svg" alt="Visual Recognition API Icon" class="banner--service-icon_INLINE"/>Visual Recognition + Megatron Demo</h1>
+        <div class="banner--service-description">This application uses the Megatron robot to capture images and then uses Visual Recognition to classify the same and perform a similarity search.</div>
+      </div>
+    </div>
+    <!--
+    <div class="banner--service-resource-container">
+      <div class="banner--row">
+        <div class="banner--service-resource"><span class="icon icon-link"></span><strong>Resources:</strong></div>
+      </div>
+      <div class="banner--row">
+        <div class="banner--service-links">
+          <li class="base--li banner--service-link-item"><a href="https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/" class="base--a">API Reference</a></li>
+          <li class="base--li banner--service-link-item"><a href="http://www.ibm.com/watson/developercloud/doc/visual-recognition/" class="base--a">Documentation</a></li>
+          <li class="base--li banner--service-link-item"><a href="https://github.com/watson-developer-cloud/visual-recognition-nodejs" class="base--a">Fork on Github</a></li>
+        </div>
+      </div>
+    </div>
+  -->
+  </div>
+</div>
